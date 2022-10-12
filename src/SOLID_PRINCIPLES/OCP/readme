@@ -1,0 +1,17 @@
+Open Closed Principle(OCP) + Specification design pattern
+Open for extention and close for modification
+---------------------------------------------------------
+Here we are going to have a list of product.
+Currently we have  functionality to filter it by Color  or Size
+Now new feature came to filter by both  Color  or Size
+It was easy to add a new filter because there was only two Specification
+if the specification are more then combination of filters wll be too high and modification too
+
+
+Implementing OCP
+---------------
+create an interface Specification- ColorSpecification and SizeSpecoification will implement Specification
+create an interface Filter - BetterFilter will implement Filter and filter as per specification
+Here we need to filter with both Specification -> we create and AndSpecification class and implemented Specification there
+Suppose in future we need to add more specification(let say x). so will create a xSpecification class and one more specification
+as we created AndSpecification for 2 specification. Similarly, we will do for 3 specification.
