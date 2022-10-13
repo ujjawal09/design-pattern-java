@@ -10,5 +10,8 @@ if the specification are more then combination of filters wll be too high and mo
 
 Implementing OCP
 ---------------
-create an interface Specification
-crate an interface Filter
+create an interface Specification- ColorSpecification and SizeSpecoification will implement Specification
+create an interface Filter - BetterFilter will implement Filter and filter as per specification
+Here we need to filter with both Specification -> we create and AndSpecification class and implemented Specification there
+Suppose in future we need to add more specification(let say x). so will create a xSpecification class and one more specification
+as we created AndSpecification for 2 specification. Similarly, we will do for 3 specification.
